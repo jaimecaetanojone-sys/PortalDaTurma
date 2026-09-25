@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal da Turma</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header id="header" class="site-header">
+
+        <!-- Logo -->
+         <div id="logo" class="logo">
+            <a href="INICIO.html">Portal da Turma</a>
+        </div>
+    
+        <!-- Menu de principal -->
+         <nav id="main-navigation" class="main-navigation">
+            <ul>
+                <li><a href="INICIO.html">Início</a></li>
+                <li><a href="SOBRE.html">Sobre</a></li>
+                <li><a href="CONTATO.html">Contato</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Botao do menu mobile 
+         O javascript sera adicionado posteriomente -->
+
+         <button id="menu-button" class="menu-botton" type="button" aria-label="abrir menu">menu</button>
+    </header>
+
+    <! -- ==== MAIN CONTEUDO PRINCIPAL DA PAGINA== -->
+
+    <main id="main-content">
+        <! --=====HERO / APRESENTAÇÃO =======-->
+    
+    <section id="hero" class="hero-section">
+        <div class="hero-cotent">
+            <p class="hero-label">Portal Academico</p>
+            <h1 class="hero-content">Todo o material da turma num só lugar</h1>
+
+        <p class="hero-description">Encontre materias de estudo, testes de anos anteriores, fichas, exercicios e outros recursos academicos.</p>
+
+        <!--BOTOES NO HERO-->
+
+        <div id="hero-actions" class="hero-actions"><a href="MATERIAS.html" id="materias-button" class="button button-primary">VER MATERIAS</a>
+            <a href="testes.html" id="testes-button" class="button button-secondary">VER TESTES</a>
+
+        </div>
+        </div>
+        <!--CARTAO DE DESTAQUE-->
+
+        <div class="hero-card" id="hero-card">
+            <div class="hero-card-icon">
+                <i class="fa-solid fa-book"></i>
+                <h2>Biblioteca</h2>
+                <p>Materiais organizados por disciplinas, ano e tipo de documento.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!--PESQUISA-->
+
+    <section id="search" class="search-section">
+        <div class="search-content">
+            <h2>Encontre o que procura</h2>
+            
+            <form action="#" id="search-form" class="search-form" method="get">
+                <label for="search-input">Pesquise por material, teste ou disciplinas: 
+                </label>
+    <input type="search" id="search-input" name="search" placeholder="Ex: Teste de Física 2025">
+
+    <button type="submit" id="search-button" class="search-button"><i class="fa-magnifying-glass">Pesquisar</i> </button>
+            </form>
+        </div>
+    </section>
+
+    <!---Disciplinas-->
+
+    <section id="subjects" class="subjects-section">
+        <div class="subjects-container">
+            <header Class="section-header"><h2>Disciplinas</h2>
+            <ul>
+                <li><a href="disciplina.html?nome=Matemática">Matemática</a></li>
+                <li><a href="disciplina.html?nome=Português">Português</a></li>
+                <li><a href="disciplina.html?nome=História">História</a></li>
+                <li><a href="disciplina.html?nome=Geografia">Geografia</a></li>
+            </ul> 
+            <p>Escolha uma disciplina para encontrar os materiais disponiveis</p>
+        </header>
+    
+        <!--LISTA DE DISCIPLINAS-->
+        <div id="subjects-list" class="subjects-list">
+            <!--Fisica-->
+
+        <article id="subject-physics" class="subject-card"> <div class="subject-icon"><i class="fa-solid fa-atom"></i>
+        </div>
+
+
+
+
+
+
+
+
+
+        
+
+
+    
+    </article>
+        </div>
+
+        </div>
+    </section>
+    </main>
+
+    
+        
+</body>
+</html>
