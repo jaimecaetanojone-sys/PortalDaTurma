@@ -1,0 +1,1466 @@
+/* =========================================================
+   PORTAL DA TURMA — INICIO.CSS
+   Design moderno • Glassmorphism • Animações • Responsivo
+========================================================= */
+
+
+/* =========================================================
+   1. VARIÁVEIS
+========================================================= */
+
+:root {
+    --primary: #2563eb;
+    --primary-light: #60a5fa;
+    --primary-dark: #1e3a8a;
+
+    --secondary: #7c3aed;
+    --accent: #06b6d4;
+
+    --dark: #07111f;
+    --dark-2: #0b1729;
+
+    --white: #ffffff;
+    --text: #172033;
+    --text-light: #64748b;
+
+    --glass: rgba(255, 255, 255, 0.10);
+    --glass-border: rgba(255, 255, 255, 0.18);
+
+    --shadow:
+        0 20px 60px rgba(0, 0, 0, 0.15);
+
+    --transition: 0.35s cubic-bezier(.2,.8,.2,1);
+}
+
+
+/* =========================================================
+   2. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fbff,
+            #eef5ff,
+            #f8f5ff
+        );
+
+    color: var(--text);
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   3. FUNDO DECORATIVO
+========================================================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    background: #2563eb;
+
+    filter: blur(150px);
+
+    opacity: 0.08;
+
+    border-radius: 50%;
+
+    top: -150px;
+    left: -150px;
+
+    z-index: -1;
+
+    animation: floatingLight 8s ease-in-out infinite;
+}
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 400px;
+    height: 400px;
+
+    background: #7c3aed;
+
+    filter: blur(150px);
+
+    opacity: 0.07;
+
+    border-radius: 50%;
+
+    right: -150px;
+    bottom: -100px;
+
+    z-index: -1;
+
+    animation: floatingLight 10s ease-in-out infinite reverse;
+}
+
+
+@keyframes floatingLight {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(40px, 30px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+
+/* =========================================================
+   4. CABEÇALHO
+========================================================= */
+
+header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 18px 7%;
+
+    background:
+        rgba(7, 17, 31, 0.82);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   5. LOGO
+========================================================= */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+
+    cursor: pointer;
+}
+
+
+.logo i {
+
+    width: 44px;
+
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.45);
+
+    transition: var(--transition);
+}
+
+
+.logo:hover i {
+
+    transform:
+        rotate(-8deg)
+        scale(1.08);
+
+    box-shadow:
+        0 12px 35px rgba(124, 58, 237, 0.55);
+}
+
+
+/* =========================================================
+   6. MENU
+========================================================= */
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+nav a {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 14px;
+
+    color: #dbeafe;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    border-radius: 10px;
+
+    transition: var(--transition);
+}
+
+
+nav a::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(37,99,235,.2),
+            rgba(124,58,237,.2)
+        );
+
+    opacity: 0;
+
+    transition: var(--transition);
+
+    z-index: -1;
+}
+
+
+nav a:hover::before {
+
+    opacity: 1;
+}
+
+
+nav a:hover {
+
+    color: white;
+
+    transform:
+        translateY(-2px);
+}
+
+
+nav a i {
+
+    font-size: 15px;
+
+    transition: var(--transition);
+}
+
+
+nav a:hover i {
+
+    transform:
+        scale(1.15)
+        rotate(-5deg);
+}
+
+
+nav a.active {
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(37,99,235,.35),
+            rgba(124,58,237,.35)
+        );
+
+    box-shadow:
+        inset 0 0 20px rgba(255,255,255,.05);
+}
+
+
+/* =========================================================
+   7. HERO
+========================================================= */
+
+.hero {
+
+    position: relative;
+
+    min-height: 650px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 100px 7%;
+
+    color: white;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(96,165,250,.25),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(124,58,237,.30),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #07111f,
+            #0d1b35,
+            #111a3a
+        );
+}
+
+
+/* brilho */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(37,99,235,.35),
+            transparent 70%
+        );
+
+    filter: blur(30px);
+
+    animation:
+        heroGlow 8s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+
+@keyframes heroGlow {
+
+    0% {
+        transform: translate(-150px, -100px);
+    }
+
+    50% {
+        transform: translate(150px, 100px);
+    }
+
+    100% {
+        transform: translate(-150px, -100px);
+    }
+}
+
+
+/* =========================================================
+   8. HERO CONTEÚDO
+========================================================= */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 900px;
+
+    animation:
+        heroAppear 1s ease forwards;
+}
+
+
+@keyframes heroAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(40px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(42px, 7vw, 76px);
+
+    line-height: 1.05;
+
+    font-weight: 900;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #93c5fd,
+            #c4b5fd,
+            #ffffff
+        );
+
+    background-size: 300% auto;
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+
+    animation:
+        gradientText 5s linear infinite;
+}
+
+
+@keyframes gradientText {
+
+    to {
+        background-position: 300% center;
+    }
+}
+
+
+.hero h1 span {
+
+    color: transparent;
+
+    background:
+        linear-gradient(
+            90deg,
+            #60a5fa,
+            #a78bfa,
+            #22d3ee
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+}
+
+
+.hero p {
+
+    max-width: 700px;
+
+    margin: 0 auto 35px;
+
+    color: #cbd5e1;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   9. BOTÕES
+========================================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+.btn {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 14px 24px;
+
+    border-radius: 13px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    overflow: hidden;
+
+    transition: var(--transition);
+}
+
+
+.btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 80%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.35),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: .6s;
+}
+
+
+.btn:hover::before {
+
+    left: 130%;
+}
+
+
+.btn-primary {
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #7c3aed
+        );
+
+    box-shadow:
+        0 10px 30px
+        rgba(37,99,235,.35);
+}
+
+
+.btn-primary:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.02);
+
+    box-shadow:
+        0 18px 45px
+        rgba(37,99,235,.5);
+}
+
+
+.btn-secondary {
+
+    color: white;
+
+    border:
+        1px solid
+        rgba(255,255,255,.25);
+
+    background:
+        rgba(255,255,255,.07);
+
+    backdrop-filter: blur(15px);
+}
+
+
+.btn-secondary:hover {
+
+    background:
+        rgba(255,255,255,.14);
+
+    border-color:
+        rgba(255,255,255,.4);
+
+    transform:
+        translateY(-4px);
+}
+
+
+/* =========================================================
+   10. SEÇÃO DE CARDS
+========================================================= */
+
+.cards-section {
+
+    padding:
+        100px 7%;
+
+    position: relative;
+}
+
+
+.section-title {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin:
+        0 auto 55px;
+}
+
+
+.section-title h2 {
+
+    font-size:
+        clamp(30px, 4vw, 44px);
+
+    font-weight: 850;
+
+    color: var(--dark);
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 12px;
+}
+
+
+.section-title p {
+
+    color: var(--text-light);
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   11. GRID
+========================================================= */
+
+.cards-container {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   12. CARD
+========================================================= */
+
+.card {
+
+    position: relative;
+
+    padding: 32px 25px;
+
+    background:
+        rgba(255,255,255,.72);
+
+    backdrop-filter:
+        blur(20px);
+
+    -webkit-backdrop-filter:
+        blur(20px);
+
+    border:
+        1px solid
+        rgba(255,255,255,.8);
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 45px
+        rgba(15,23,42,.08);
+
+    transition:
+        transform .4s cubic-bezier(.2,.8,.2,1),
+        box-shadow .4s ease;
+}
+
+
+.card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -100px;
+
+    right: -100px;
+
+    width: 200px;
+
+    height: 200px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(37,99,235,.15),
+            rgba(124,58,237,.12)
+        );
+
+    transition: .5s;
+}
+
+
+.card:hover {
+
+    transform:
+        translateY(-12px);
+
+    box-shadow:
+        0 30px 70px
+        rgba(15,23,42,.15);
+}
+
+
+.card:hover::before {
+
+    transform:
+        scale(1.5);
+}
+
+
+/* =========================================================
+   13. ÍCONE DOS CARDS
+========================================================= */
+
+.card-icon {
+
+    position: relative;
+
+    width: 70px;
+
+    height: 70px;
+
+    margin:
+        0 auto 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 20px;
+
+    color: white;
+
+    font-size: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    box-shadow:
+        0 12px 30px
+        rgba(37,99,235,.3);
+
+    transition: var(--transition);
+}
+
+
+.card:hover .card-icon {
+
+    transform:
+        rotate(-6deg)
+        scale(1.1);
+
+    box-shadow:
+        0 15px 40px
+        rgba(124,58,237,.4);
+}
+
+
+.card h3 {
+
+    color: var(--dark);
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+
+.card p {
+
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+}
+
+
+.card a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--primary);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    transition: var(--transition);
+}
+
+
+.card a:hover {
+
+    color: var(--secondary);
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   14. WELCOME SECTION
+========================================================= */
+
+.welcome-section {
+
+    padding:
+        100px 7%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f1f6ff
+        );
+}
+
+
+.welcome-container {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+.welcome-content {
+
+    flex: 1;
+}
+
+
+.welcome-content h2 {
+
+    font-size:
+        clamp(30px, 4vw, 45px);
+
+    color: var(--dark);
+
+    line-height: 1.15;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 22px;
+}
+
+
+.welcome-content p {
+
+    color: var(--text-light);
+
+    margin-bottom: 15px;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   15. IMAGEM / ÍCONE DA WELCOME
+========================================================= */
+
+.welcome-image {
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.welcome-image i {
+
+    position: relative;
+
+    width: 250px;
+
+    height: 250px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 100px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #7c3aed
+        );
+
+    box-shadow:
+        0 30px 80px
+        rgba(37,99,235,.3);
+
+    animation:
+        floating 4s ease-in-out infinite;
+}
+
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-18px);
+    }
+}
+
+
+/* =========================================================
+   16. RODAPÉ
+========================================================= */
+
+footer {
+
+    position: relative;
+
+    padding:
+        60px 7% 25px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #050b16,
+            #0b1730
+        );
+
+    overflow: hidden;
+}
+
+
+footer::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 400px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(37,99,235,.15);
+
+    filter: blur(100px);
+
+    top: -250px;
+
+    right: -100px;
+}
+
+
+.footer-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 50px;
+}
+
+
+footer h3 {
+
+    font-size: 21px;
+
+    margin-bottom: 15px;
+}
+
+
+footer h4 {
+
+    margin-bottom: 15px;
+
+    color: white;
+}
+
+
+footer p {
+
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+
+footer a {
+
+    display: block;
+
+    color: #94a3b8;
+
+    text-decoration: none;
+
+    margin-bottom: 9px;
+
+    transition: var(--transition);
+}
+
+
+footer a:hover {
+
+    color: white;
+
+    transform:
+        translateX(5px);
+}
+
+
+/* =========================================================
+   17. ANIMAÇÃO AO PASSAR PELOS LINKS
+========================================================= */
+
+a {
+
+    -webkit-tap-highlight-color:
+        transparent;
+}
+
+
+/* =========================================================
+   18. SELEÇÃO DE TEXTO
+========================================================= */
+
+::selection {
+
+    background: #2563eb;
+
+    color: white;
+}
+
+
+/* =========================================================
+   19. SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+
+    width: 9px;
+}
+
+
+::-webkit-scrollbar-track {
+
+    background: #eef2f7;
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background:
+        linear-gradient(
+            #2563eb,
+            #7c3aed
+        );
+
+    border-radius: 20px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background:
+        linear-gradient(
+            #1d4ed8,
+            #6d28d9
+        );
+}
+
+
+/* =========================================================
+   20. RESPONSIVIDADE — TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    header {
+
+        padding:
+            16px 4%;
+    }
+
+
+    nav {
+
+        gap: 3px;
+    }
+
+
+    nav a {
+
+        padding:
+            9px 10px;
+
+        font-size: 13px;
+    }
+
+
+    .cards-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .welcome-container {
+
+        gap: 40px;
+    }
+
+
+    .footer-content {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   21. RESPONSIVIDADE — CELULAR
+========================================================= */
+
+@media (max-width: 700px) {
+
+    header {
+
+        position: relative;
+
+        flex-direction: column;
+
+        gap: 18px;
+
+        padding:
+            18px 20px;
+    }
+
+
+    nav {
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 5px;
+    }
+
+
+    nav a {
+
+        padding:
+            8px 9px;
+
+        font-size: 12px;
+    }
+
+
+    .hero {
+
+        min-height:
+            560px;
+
+        padding:
+            70px 20px;
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            43px;
+
+        letter-spacing:
+            -2px;
+    }
+
+
+    .hero p {
+
+        font-size:
+            16px;
+    }
+
+
+    .hero-buttons {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        max-width:
+            300px;
+
+        margin:
+            auto;
+    }
+
+
+    .btn {
+
+        width:
+            100%;
+    }
+
+
+    .cards-section {
+
+        padding:
+            70px 20px;
+    }
+
+
+    .cards-container {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .welcome-section {
+
+        padding:
+            70px 20px;
+    }
+
+
+    .welcome-container {
+
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+    }
+
+
+    .welcome-image i {
+
+        width:
+            190px;
+
+        height:
+            190px;
+
+        font-size:
+            75px;
+    }
+
+
+    .footer-content {
+
+        grid-template-columns:
+            1fr;
+
+        text-align:
+            center;
+
+        gap:
+            30px;
+    }
+}
+
+
+/* =========================================================
+   22. REDUÇÃO DE ANIMAÇÕES
+   Para utilizadores que preferem menos movimento
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        scroll-behavior:
+            auto !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
+}
