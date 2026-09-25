@@ -3,120 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Portal da Turma</title>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Ligação com o CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome para os ícones -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
-    <header id="header" class="site-header">
 
-        <!-- Logo -->
-         <div id="logo" class="logo">
-            <a href="INICIO.html">Portal da Turma</a>
+    <!-- CABEÇALHO -->
+    <header>
+
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Portal da Turma</span>
         </div>
-    
-        <!-- Menu de principal -->
-         <nav id="main-navigation" class="main-navigation">
-            <ul>
-                <li><a href="INICIO.html">Início</a></li>
-                <li><a href="SOBRE.html">Sobre</a></li>
-                <li><a href="CONTATO.html">Contato</a></li>
-            </ul>
-        </nav>
-    
-        <!-- Botao do menu mobile 
-         O javascript sera adicionado posteriomente -->
 
-         <button id="menu-button" class="menu-botton" type="button" aria-label="abrir menu">menu</button>
+        <!-- MENU DE NAVEGAÇÃO -->
+        <nav>
+            <a href="INICIO.html">
+                <i class="fa-solid fa-house"></i>
+                Início
+            </a>
+
+            <a href="materiais.html">
+                <i class="fa-solid fa-book"></i>
+                Materiais
+            </a>
+
+            <a href="testes.html">
+                <i class="fa-solid fa-file-pen"></i>
+                Testes
+            </a>
+
+            <a href="avisos.html">
+                <i class="fa-solid fa-bullhorn"></i>
+                Avisos
+            </a>
+
+            <a href="sobre.html">
+                <i class="fa-solid fa-circle-info"></i>
+                Sobre
+            </a>
+        </nav>
+
     </header>
 
-    <! -- ==== MAIN CONTEUDO PRINCIPAL DA PAGINA== -->
 
-    <main id="main-content">
-        <! --=====HERO / APRESENTAÇÃO =======-->
-    
-    <section id="hero" class="hero-section">
-        <div class="hero-cotent">
-            <p class="hero-label">Portal Academico</p>
-            <h1 class="hero-content">Todo o material da turma num só lugar</h1>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
 
-        <p class="hero-description">Encontre materias de estudo, testes de anos anteriores, fichas, exercicios e outros recursos academicos.</p>
+        <!-- SEÇÃO DE APRESENTAÇÃO -->
+        <section class="hero">
 
-        <!--BOTOES NO HERO-->
+            <div class="hero-text">
 
-        <div id="hero-actions" class="hero-actions"><a href="MATERIAS.html" id="materias-button" class="button button-primary">VER MATERIAS</a>
-            <a href="testes.html" id="testes-button" class="button button-secondary">VER TESTES</a>
+                <h1>
+                    Bem-vindo ao
+                    <span>Portal da Turma</span>
+                </h1>
 
-        </div>
-        </div>
-        <!--CARTAO DE DESTAQUE-->
+                <p>
+                    Encontre materiais de estudo, testes de anos anteriores,
+                    avisos e outros conteúdos académicos da nossa turma.
+                </p>
 
-        <div class="hero-card" id="hero-card">
-            <div class="hero-card-icon">
-                <i class="fa-solid fa-book"></i>
-                <h2>Biblioteca</h2>
-                <p>Materiais organizados por disciplinas, ano e tipo de documento.</p>
+                <div class="hero-buttons">
+
+                    <a href="materiais.html" class="btn">
+                        <i class="fa-solid fa-book"></i>
+                        Ver Materiais
+                    </a>
+
+                    <a href="testes.html" class="btn">
+                        <i class="fa-solid fa-file-pen"></i>
+                        Ver Testes
+                    </a>
+
+                </div>
 
             </div>
-        </div>
-    </section>
 
-    <!--PESQUISA-->
+            <div class="hero-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
 
-    <section id="search" class="search-section">
-        <div class="search-content">
-            <h2>Encontre o que procura</h2>
-            
-            <form action="#" id="search-form" class="search-form" method="get">
-                <label for="search-input">Pesquise por material, teste ou disciplinas: 
-                </label>
-    <input type="search" id="search-input" name="search" placeholder="Ex: Teste de Física 2025">
-
-    <button type="submit" id="search-button" class="search-button"><i class="fa-magnifying-glass">Pesquisar</i> </button>
-            </form>
-        </div>
-    </section>
-
-    <!---Disciplinas-->
-
-    <section id="subjects" class="subjects-section">
-        <div class="subjects-container">
-            <header Class="section-header"><h2>Disciplinas</h2>
-            <ul>
-                <li><a href="disciplina.html?nome=Matemática">Matemática</a></li>
-                <li><a href="disciplina.html?nome=Português">Português</a></li>
-                <li><a href="disciplina.html?nome=História">História</a></li>
-                <li><a href="disciplina.html?nome=Geografia">Geografia</a></li>
-            </ul> 
-            <p>Escolha uma disciplina para encontrar os materiais disponiveis</p>
-        </header>
-    
-        <!--LISTA DE DISCIPLINAS-->
-        <div id="subjects-list" class="subjects-list">
-            <!--Fisica-->
-
-        <article id="subject-physics" class="subject-card"> <div class="subject-icon"><i class="fa-solid fa-atom"></i>
-        </div>
+        </section>
 
 
+        <!-- CARTÕES DE ACESSO -->
+        <section class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">
+                    <i class="fa-solid fa-book"></i>
+                </div>
+
+                <h2>Materiais</h2>
+
+                <p>
+                    Acesse resumos, fichas, trabalhos e outros
+                    materiais de estudo.
+                </p>
+
+                <a href="materiais.html">
+                    Acessar
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
 
 
+            <div class="card">
+
+                <div class="card-icon">
+                    <i class="fa-solid fa-file-pen"></i>
+                </div>
+
+                <h2>Testes Anteriores</h2>
+
+                <p>
+                    Consulte testes e exames de anos anteriores
+                    para preparação.
+                </p>
+
+                <a href="testes.html">
+                    Acessar
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
 
 
+            <div class="card">
+
+                <div class="card-icon">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </div>
+
+                <h2>Avisos</h2>
+
+                <p>
+                    Consulte os avisos e informações importantes
+                    da turma.
+                </p>
+
+                <a href="avisos.html">
+                    Acessar
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
 
 
+            <div class="card">
 
-        
+                <div class="card-icon">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
 
+                <h2>Sobre</h2>
 
-    
-    </article>
-        </div>
+                <p>
+                    Conheça o projeto e saiba mais sobre o
+                    Portal da Turma.
+                </p>
 
-        </div>
-    </section>
+                <a href="sobre.html">
+                    Saber mais
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </section>
+
     </main>
 
-    
-        
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>
+            &copy; 2026 Portal da Turma.
+            Todos os direitos reservados.
+        </p>
+
+    </footer>
+
 </body>
 </html>

@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Testes | Portal da Turma</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <span>
+                Portal da Turma
+            </span>
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <nav>
+
+            <a href="INICIO.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Início
+
+            </a>
+
+
+            <a href="materiais.html">
+
+                <i class="fa-solid fa-book"></i>
+
+                Materiais
+
+            </a>
+
+
+            <a href="testes.html" class="active">
+
+                <i class="fa-solid fa-file-pen"></i>
+
+                Testes
+
+            </a>
+
+
+            <a href="avisos.html">
+
+                <i class="fa-solid fa-bullhorn"></i>
+
+                Avisos
+
+            </a>
+
+
+            <a href="sobre.html">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                Sobre
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         CONTEÚDO PRINCIPAL
+    ========================== -->
+
+    <main>
+
+
+        <!-- TÍTULO -->
+
+        <section class="page-title">
+
+            <h1>
+
+                <i class="fa-solid fa-file-pen"></i>
+
+                Testes Anteriores
+
+            </h1>
+
+
+            <p>
+
+                Encontre testes, exames e avaliações de anos anteriores.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             PESQUISA
+        ========================== -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchTest"
+                    placeholder="Pesquisar cadeira ou teste..."
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SELEÇÃO DO ANO
+        ========================== -->
+
+        <section class="year-section">
+
+            <h2>
+
+                <i class="fa-solid fa-calendar"></i>
+
+                Escolha o ano
+
+            </h2>
+
+
+            <!-- BOTÃO DE ANO -->
+
+            <div class="year-selector">
+
+                <button id="yearButton">
+
+                    <span id="selectedYear">
+                        Selecionar ano
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </button>
+
+
+                <!-- LISTA DOS ANOS -->
+
+                <div id="yearMenu" class="year-menu">
+
+                    <div data-year="todos">
+                        Todos os anos
+                    </div>
+
+                    <div data-year="2026">
+                        2026
+                    </div>
+
+                    <div data-year="2025">
+                        2025
+                    </div>
+
+                    <div data-year="2024">
+                        2024
+                    </div>
+
+                    <div data-year="2023">
+                        2023
+                    </div>
+
+                    <div data-year="2022">
+                        2022
+                    </div>
+
+                    <div data-year="2021">
+                        2021
+                    </div>
+
+                    <div data-year="2020">
+                        2020
+                    </div>
+
+                    <div data-year="2019">
+                        2019
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             DISCIPLINAS
+        ========================== -->
+
+        <section class="subjects-section">
+
+
+            <h2>
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                Cadeiras
+
+            </h2>
+
+
+
+            <div class="subject-grid">
+
+
+                <!-- FÍSICA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-atom"></i>
+
+                    </div>
+
+                    <h3>
+                        Física
+                    </h3>
+
+                    <p>
+                        Testes e exames de Física.
+                    </p>
+
+                </div>
+
+
+
+                <!-- MATEMÁTICA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-square-root-variable"></i>
+
+                    </div>
+
+                    <h3>
+                        Matemática
+                    </h3>
+
+                    <p>
+                        Testes e exercícios de Matemática.
+                    </p>
+
+                </div>
+
+
+
+                <!-- QUÍMICA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-flask"></i>
+
+                    </div>
+
+                    <h3>
+                        Química
+                    </h3>
+
+                    <p>
+                        Testes de Química.
+                    </p>
+
+                </div>
+
+
+
+                <!-- BIOLOGIA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-dna"></i>
+
+                    </div>
+
+                    <h3>
+                        Biologia
+                    </h3>
+
+                    <p>
+                        Testes de Biologia.
+                    </p>
+
+                </div>
+
+
+
+                <!-- BIOQUÍMICA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-vial"></i>
+
+                    </div>
+
+                    <h3>
+                        Bioquímica
+                    </h3>
+
+                    <p>
+                        Testes de Bioquímica.
+                    </p>
+
+                </div>
+
+
+
+                <!-- INGLÊS -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-language"></i>
+
+                    </div>
+
+                    <h3>
+                        Inglês
+                    </h3>
+
+                    <p>
+                        Testes de Inglês.
+                    </p>
+
+                </div>
+
+
+
+                <!-- INFORMÁTICA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-computer"></i>
+
+                    </div>
+
+                    <h3>
+                        Informática
+                    </h3>
+
+                    <p>
+                        Testes de Informática.
+                    </p>
+
+                </div>
+
+
+
+                <!-- INTRODUÇÃO À MEDICINA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-user-doctor"></i>
+
+                    </div>
+
+                    <h3>
+                        Introdução à Medicina
+                    </h3>
+
+                    <p>
+                        Testes de Introdução à Medicina.
+                    </p>
+
+                </div>
+
+
+
+                <!-- PORTUGUÊS -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-language"></i>
+
+                    </div>
+
+                    <h3>
+                        Língua Portuguesa
+                    </h3>
+
+                    <p>
+                        Testes de Língua Portuguesa.
+                    </p>
+
+                </div>
+
+
+
+                <!-- ANATOMIA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-bone"></i>
+
+                    </div>
+
+                    <h3>
+                        Anatomia
+                    </h3>
+
+                    <p>
+                        Testes e avaliações de Anatomia.
+                    </p>
+
+                </div>
+
+
+
+                <!-- FISIOLOGIA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-heart-pulse"></i>
+
+                    </div>
+
+                    <h3>
+                        Fisiologia
+                    </h3>
+
+                    <p>
+                        Testes de Fisiologia Humana.
+                    </p>
+
+                </div>
+
+
+
+                <!-- HISTOLOGIA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-microscope"></i>
+
+                    </div>
+
+                    <h3>
+                        Histologia
+                    </h3>
+
+                    <p>
+                        Testes de Histologia.
+                    </p>
+
+                </div>
+
+
+
+                <!-- EMBRIOLOGIA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-person-pregnant"></i>
+
+                    </div>
+
+                    <h3>
+                        Embriologia
+                    </h3>
+
+                    <p>
+                        Testes de Embriologia.
+                    </p>
+
+                </div>
+
+
+
+                <!-- GENÉTICA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-dna"></i>
+
+                    </div>
+
+                    <h3>
+                        Genética
+                    </h3>
+
+                    <p>
+                        Testes de Genética.
+                    </p>
+
+                </div>
+
+
+
+                <!-- MICROBIOLOGIA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-bacteria"></i>
+
+                    </div>
+
+                    <h3>
+                        Microbiologia
+                    </h3>
+
+                    <p>
+                        Testes de Microbiologia.
+                    </p>
+
+                </div>
+
+
+
+                <!-- IMUNOLOGIA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-shield-virus"></i>
+
+                    </div>
+
+                    <h3>
+                        Imunologia
+                    </h3>
+
+                    <p>
+                        Testes de Imunologia.
+                    </p>
+
+                </div>
+
+
+
+                <!-- PARASITOLOGIA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-bug"></i>
+
+                    </div>
+
+                    <h3>
+                        Parasitologia
+                    </h3>
+
+                    <p>
+                        Testes de Parasitologia.
+                    </p>
+
+                </div>
+
+
+
+                <!-- PATOLOGIA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-virus"></i>
+
+                    </div>
+
+                    <h3>
+                        Patologia
+                    </h3>
+
+                    <p>
+                        Testes de Patologia.
+                    </p>
+
+                </div>
+
+
+
+                <!-- FARMACOLOGIA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-pills"></i>
+
+                    </div>
+
+                    <h3>
+                        Farmacologia
+                    </h3>
+
+                    <p>
+                        Testes de Farmacologia.
+                    </p>
+
+                </div>
+
+
+
+                <!-- SAÚDE PÚBLICA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-hospital"></i>
+
+                    </div>
+
+                    <h3>
+                        Saúde Pública
+                    </h3>
+
+                    <p>
+                        Testes de Saúde Pública.
+                    </p>
+
+                </div>
+
+
+
+                <!-- BIOÉTICA -->
+
+                <div class="subject-card">
+
+                    <div class="subject-icon">
+
+                        <i class="fa-solid fa-scale-balanced"></i>
+
+                    </div>
+
+                    <h3>
+                        Bioética
+                    </h3>
+
+                    <p>
+                        Testes de Bioética.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             LISTA DE TESTES
+        ========================== -->
+
+        <section class="tests-section">
+
+            <h2>
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                Testes disponíveis
+
+            </h2>
+
+
+            <div id="testList">
+
+
+                <!-- TESTE -->
+
+                <div class="test-card" data-year="2026">
+
+                    <div class="test-icon">
+
+                        <i class="fa-solid fa-atom"></i>
+
+                    </div>
+
+
+                    <div class="test-info">
+
+                        <h3>
+                            Teste de Física I
+                        </h3>
+
+                        <p>
+                            Física • 2026
+                        </p>
+
+                    </div>
+
+
+                    <div class="test-actions">
+
+                        <a href="#" class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Ver
+
+                        </a>
+
+
+                        <a href="#" class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+
+                            Baixar
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TESTE -->
+
+                <div class="test-card" data-year="2025">
+
+                    <div class="test-icon">
+
+                        <i class="fa-solid fa-flask"></i>
+
+                    </div>
+
+
+                    <div class="test-info">
+
+                        <h3>
+                            Teste de Química
+                        </h3>
+
+                        <p>
+                            Química • 2025
+                        </p>
+
+                    </div>
+
+
+                    <div class="test-actions">
+
+                        <a href="#" class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Ver
+
+                        </a>
+
+
+                        <a href="#" class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+
+                            Baixar
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TESTE -->
+
+                <div class="test-card" data-year="2024">
+
+                    <div class="test-icon">
+
+                        <i class="fa-solid fa-dna"></i>
+
+                    </div>
+
+
+                    <div class="test-info">
+
+                        <h3>
+                            Teste de Biologia
+                        </h3>
+
+                        <p>
+                            Biologia • 2024
+                        </p>
+
+                    </div>
+
+
+                    <div class="test-actions">
+
+                        <a href="#" class="view-btn">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Ver
+
+                        </a>
+
+
+                        <a href="#" class="download-btn">
+
+                            <i class="fa-solid fa-download"></i>
+
+                            Baixar
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer>
+
+        <p>
+
+            &copy; 2026 Portal da Turma.
+
+            Todos os direitos reservados.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+
+        /* ==========================
+           MENU DE ANOS
+        =========================== */
+
+        const yearButton =
+            document.getElementById("yearButton");
+
+        const yearMenu =
+            document.getElementById("yearMenu");
+
+        const selectedYear =
+            document.getElementById("selectedYear");
+
+
+        /*
+        Abrir / fechar lista
+        */
+
+        yearButton.addEventListener("click", function () {
+
+            yearMenu.classList.toggle("show");
+
+        });
+
+
+
+        /*
+        Selecionar ano
+        */
+
+        const years =
+            yearMenu.querySelectorAll("div");
+
+
+        years.forEach(function (year) {
+
+            year.addEventListener("click", function () {
+
+                const selected =
+                    this.getAttribute("data-year");
+
+
+                selectedYear.textContent =
+                    this.textContent;
+
+
+                yearMenu.classList.remove("show");
+
+
+                filterTests(selected);
+
+            });
+
+        });
+
+
+
+        /* ==========================
+           FILTRAR TESTES
+        =========================== */
+
+        function filterTests(year) {
+
+            const tests =
+                document.querySelectorAll(".test-card");
+
+
+            tests.forEach(function (test) {
+
+                const testYear =
+                    test.getAttribute("data-year");
+
+
+                if (
+                    year === "todos" ||
+                    testYear === year
+                ) {
+
+                    test.style.display = "";
+
+                } else {
+
+                    test.style.display = "none";
+
+                }
+
+            });
+
+        }
+
+
+
+        /* ==========================
+           PESQUISA
+        =========================== */
+
+        const search =
+            document.getElementById("searchTest");
+
+
+        search.addEventListener("input", function () {
+
+            const text =
+                this.value.toLowerCase();
+
+
+            const tests =
+                document.querySelectorAll(".test-card");
+
+
+            tests.forEach(function (test) {
+
+                const content =
+                    test.textContent.toLowerCase();
+
+
+                if (content.includes(text)) {
+
+                    test.style.display = "";
+
+                } else {
+
+                    test.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+
+
+        /* ==========================
+           FECHAR MENU AO CLICAR FORA
+        =========================== */
+
+        document.addEventListener("click", function (event) {
+
+            if (
+                !yearButton.contains(event.target) &&
+                !yearMenu.contains(event.target)
+            ) {
+
+                yearMenu.classList.remove("show");
+
+            }
+
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>

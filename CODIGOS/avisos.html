@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Avisos | Portal da Turma</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <span>
+                Portal da Turma
+            </span>
+
+        </div>
+
+
+        <!-- MENU DE NAVEGAÇÃO -->
+
+        <nav>
+
+            <a href="INICIO.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Início
+
+            </a>
+
+
+            <a href="materiais.html">
+
+                <i class="fa-solid fa-book"></i>
+
+                Materiais
+
+            </a>
+
+
+            <a href="testes.html">
+
+                <i class="fa-solid fa-file-pen"></i>
+
+                Testes
+
+            </a>
+
+
+            <a href="avisos.html" class="active">
+
+                <i class="fa-solid fa-bullhorn"></i>
+
+                Avisos
+
+            </a>
+
+
+            <a href="sobre.html">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                Sobre
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         CONTEÚDO PRINCIPAL
+    ========================== -->
+
+    <main>
+
+
+        <!-- TÍTULO -->
+
+        <section class="page-title">
+
+            <h1>
+
+                <i class="fa-solid fa-bullhorn"></i>
+
+                Avisos
+
+            </h1>
+
+
+            <p>
+
+                Consulte os avisos e informações importantes
+                da turma.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             PESQUISA DE AVISOS
+        ========================== -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchNotice"
+                    placeholder="Pesquisar aviso..."
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             AVISO IMPORTANTE
+        ========================== -->
+
+        <section class="important-notice">
+
+
+            <div class="important-icon">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+            </div>
+
+
+            <div class="important-content">
+
+                <span class="notice-label">
+                    AVISO IMPORTANTE
+                </span>
+
+
+                <h2>
+                    Próxima avaliação
+                </h2>
+
+
+                <p>
+
+                    Consulte a página de testes para verificar
+                    os materiais e avaliações disponíveis.
+
+                </p>
+
+
+                <span class="notice-date">
+
+                    <i class="fa-solid fa-calendar"></i>
+
+                    25 de Setembro de 2026
+
+                </span>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             LISTA DE AVISOS
+        ========================== -->
+
+        <section class="notices-section">
+
+
+            <div class="section-header">
+
+                <h2>
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    Avisos recentes
+
+                </h2>
+
+            </div>
+
+
+
+            <div class="notice-list">
+
+
+                <!-- AVISO 1 -->
+
+                <article
+                    class="notice-card"
+                    data-category="academico"
+                >
+
+                    <div class="notice-icon academic">
+
+                        <i class="fa-solid fa-book"></i>
+
+                    </div>
+
+
+                    <div class="notice-content">
+
+                        <div class="notice-top">
+
+                            <span class="notice-category">
+                                Académico
+                            </span>
+
+                            <span class="notice-date">
+                                25/09/2026
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+
+                            Novos materiais disponíveis
+
+                        </h3>
+
+
+                        <p>
+
+                            Foram adicionados novos materiais
+                            de estudo ao portal. Consulte a
+                            página de materiais para ter acesso.
+
+                        </p>
+
+
+                        <a href="materiais.html">
+
+                            Ver materiais
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- AVISO 2 -->
+
+                <article
+                    class="notice-card"
+                    data-category="teste"
+                >
+
+                    <div class="notice-icon test">
+
+                        <i class="fa-solid fa-file-pen"></i>
+
+                    </div>
+
+
+                    <div class="notice-content">
+
+                        <div class="notice-top">
+
+                            <span class="notice-category">
+                                Testes
+                            </span>
+
+                            <span class="notice-date">
+                                24/09/2026
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+
+                            Novos testes adicionados
+
+                        </h3>
+
+
+                        <p>
+
+                            Foram adicionados testes de anos
+                            anteriores para ajudar na preparação
+                            dos estudantes.
+
+                        </p>
+
+
+                        <a href="testes.html">
+
+                            Ver testes
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- AVISO 3 -->
+
+                <article
+                    class="notice-card"
+                    data-category="geral"
+                >
+
+                    <div class="notice-icon general">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                    </div>
+
+
+                    <div class="notice-content">
+
+                        <div class="notice-top">
+
+                            <span class="notice-category">
+                                Geral
+                            </span>
+
+                            <span class="notice-date">
+                                23/09/2026
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+
+                            Bem-vindos ao Portal da Turma
+
+                        </h3>
+
+
+                        <p>
+
+                            Este portal foi criado para facilitar
+                            o acesso aos materiais, testes e
+                            informações académicas da turma.
+
+                        </p>
+
+
+                        <a href="sobre.html">
+
+                            Saber mais
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- AVISO 4 -->
+
+                <article
+                    class="notice-card"
+                    data-category="academico"
+                >
+
+                    <div class="notice-icon academic">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                    </div>
+
+
+                    <div class="notice-content">
+
+                        <div class="notice-top">
+
+                            <span class="notice-category">
+                                Académico
+                            </span>
+
+                            <span class="notice-date">
+                                20/09/2026
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+
+                            Organização dos materiais
+
+                        </h3>
+
+
+                        <p>
+
+                            Os materiais estão organizados por
+                            disciplinas para facilitar a pesquisa
+                            e o acesso dos estudantes.
+
+                        </p>
+
+
+                        <a href="materiais.html">
+
+                            Ver disciplinas
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             INFORMAÇÃO
+        ========================== -->
+
+        <section class="notice-info">
+
+
+            <i class="fa-solid fa-circle-info"></i>
+
+
+            <div>
+
+                <h3>
+                    Informação
+                </h3>
+
+                <p>
+
+                    Os avisos publicados nesta página destinam-se
+                    aos estudantes da turma. Verifique regularmente
+                    esta página para acompanhar novas informações.
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer>
+
+        <p>
+
+            &copy; 2026 Portal da Turma.
+
+            Todos os direitos reservados.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+
+        /* ==========================
+           PESQUISA DE AVISOS
+        =========================== */
+
+        const searchInput =
+            document.getElementById("searchNotice");
+
+
+        const notices =
+            document.querySelectorAll(".notice-card");
+
+
+        searchInput.addEventListener("input", function () {
+
+
+            const search =
+                this.value.toLowerCase();
+
+
+            notices.forEach(function (notice) {
+
+
+                const text =
+                    notice.textContent.toLowerCase();
+
+
+                if (text.includes(search)) {
+
+                    notice.style.display = "";
+
+                } else {
+
+                    notice.style.display = "none";
+
+                }
+
+
+            });
+
+
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
